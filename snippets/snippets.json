@@ -1,0 +1,50 @@
+{
+    "image": {
+        "prefix": "image",
+        "body": "\"image(x0${1:x0offset}, y0${2:y0offset}, x1${3:x1offset}, y1${4:y1offset}, ${5:filepath})\"",
+        "description": "Render Command: Fill an area with image",
+        "scope": "support.type.render.vgui"
+    },
+    "image_tiled": {
+        "prefix": "image_tiled",
+        "body": "\"image_tiled(x0${1:x0offset}, y0${2:y0offset}, x1${3:x1offset}, y1${4:y1offset}, ${5:filepath})\"",
+        "description": "Render Command: Fill an area with image & tile",
+        "scope": "support.type.render.vgui"
+    },
+    "image_scale": {
+        "prefix": "image_scale",
+        "body": "\"image_scale(x0${1:x0offset}, y0${2:y0offset}, x1${3:x1offset}, y1${4:y1offset}, ${5:filepath})\"",
+        "description": "Render Command: Fill an area with image & scale",
+        "scope": "support.type.render.vgui"
+    },
+    "image_proportional": {
+        "prefix": "image_proportional",
+        "body": "\"image_proportional(x0${1:x0offset}, y0${2:y0offset}, x1${3:x1offset}, y1${4:y1offset}, ${5:filepath})\"",
+        "description": "Render Command: Fill an area with image & scale proportionally",
+        "scope": "support.type.render.vgui"
+    },
+    "fill": {
+        "prefix": "fill",
+        "body": "\"fill(x0${1:x0offset}, y0${2:y0offset}, x1${3:x1offset}, y1${4:y1offset}, ${5:color})\"",
+        "description": "Render Command: Fill an area with solid color",
+        "scope": "support.type.render.vgui"
+    },
+    "gradient": {
+        "prefix": "gradient",
+        "body": "\"gradient(x0${1:x0offset}, y0${2:y0offset}, x1${3:x1offset}, y1${4:y1offset}, ${5:colortop}, ${6:colorbottom})\"",
+        "description": "Render Command: Fill an area with gradient from top to bottom",
+        "scope": "support.type.render.vgui"
+    },
+    "gradient_horizontal": {
+        "prefix": "gradient_horizontal",
+        "body": "\"gradient_horizontal(x0${1:x0offset}, y0${2:y0offset}, x1${3:x1offset}, y1${4:y1offset}, ${5:colorleft}, ${6:colorright})\"",
+        "description": "Render Command: Fill an area with gradient from left to right",
+        "scope": "support.type.render.vgui"
+    },
+    "rgba": {
+        "prefix": "rgba",
+        "body": "\"${1:R} ${2:G} ${3:B} ${4:A}\"",
+        "description": "RGBA Color format",
+        "scope": "source.vgui"
+    }
+}

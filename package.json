@@ -1,0 +1,30 @@
+{
+    "name": "vgui",
+    "displayName": "VGUI",
+    "description": "VGUI and VGUI2 support for VS Code",
+    "version": "0.0.1",
+    "publisher": "edgarware",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "vgui",
+            "aliases": ["VGUI", "vgui"],
+            "extensions": [".layout",".styles",".menu",".res"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "vgui",
+            "scopeName": "source.vgui",
+            "path": "./syntaxes/vgui.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "vgui",
+            "path": "./snippets/snippets.json"
+        }]
+    }
+}

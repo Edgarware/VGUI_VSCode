@@ -1,0 +1,97 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "VGUI",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"name": "comment.line.vgui",
+			"begin": "//",
+			"end": "$\n?"
+		}
+	],
+	"repository": {
+		"strings": {
+			"name": "string.quote.double.vgui",
+			"begin": "\\\"",
+			"end": "\\\"",
+			"patterns": [{
+				"name": "support.type.controls.vgui",
+				"match": "(?<!\\w)(ControlName|fieldName|labelText|URLText|textAlignment|zpos|style|command|text|tooltiptext|xpos|ypos|tall|wide|AutoResize|PinCorner|visible|enabled|tabPosition|paintbackground|wrap|Default|appearance|unicode)(?!\\w)"
+			},
+			{
+				"name": "constant.numeric.vgui",
+				"match": "(?<![\\w/-])([-+r]?\\d+|none|max)(?![\\w/-])"
+			},
+			{
+				"name": "entity.other.attribute-name.vgui",
+				"match": "(?i):(hover|active|focus|selected|disabled|scrollbar|framefocus)(?!\\w)"
+			},
+			{
+				"name": "support.type.render.vgui",
+				"begin": "(?<!\\w)(fill|image(_tiled|_scale|_proportional|)|gradient(_horizontal|)|dashedrect)?(\\s+|)\\(",
+				"end": "\\)(?!\\w)",
+				"patterns": [{
+					"name": "constant.language.renderpos.vgui",
+					"match": "(?<!\\w)(x0|y0|x1|y1)(?!\\w)"
+				},
+				{
+					"name": "constant.numeric.vgui",
+					"match": "(?<![\\w])(\\d+)(?![\\w])"
+				},
+				{
+					"name": "keyword.operator.math.vgui",
+					"match": "[+-]"
+				}]
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.other.vgui",
+				"match": "(?<!\\w)(controls|colors|styles|layout)(?=((\\n|){))"
+			},
+			{
+				"name": "keyword.layout.vgui",
+				"match": "(?<!\\w)(place|region)(?=((\\s+|){))"
+			},
+			{
+				"name": "support.type.layout.vgui",
+				"match": "(?<!\\w)(control(s|)|region|name|start|dir|align|margin(-left|-right|-top|-bottom|)|spacing|overflow|x|y|width|height)(?!\\w)"
+			},
+			{
+				"name": "support.type.styles.vgui",
+				"match": "(?<!\\w)(textcolor|bgcolor|shadowtextcolor|selectedtextcolor|selectedbgcolor|render(_bg|)|padding(-right|-left|-top|-bottom|)|inset(-right|-left|-top|-bottom|)|image|font-?(family|size|weight|style)|corner_rounding|minimum-(height|width)|maximum-(height|width))(?!\\w)"
+			},
+			{
+				"name": "support.type.controls.vgui",
+				"match": "(?<!\\w)(ControlName|fieldName|labelText|URLText|textAlignment|zpos|style|command|text|tooltiptext|xpos|ypos|tall|wide|AutoResize|PinCorner|visible|enabled|tabPosition|paintbackground|wrap|Default|appearance|unicode)(?!\\w)"
+			},
+			{
+				"name": "entity.other.attribute-name.vgui",
+				"match": "(?i):(hover|active|focus|selected|disabled|scrollbar|framefocus)(?!\\w)"
+			}]
+		},
+		"constants": {
+			"patterns": [{
+				"name": "constant.numeric.vgui",
+				"match": "(?<![\\w/-])([-+r]?\\d+|none|max)(?![\\w/-])"
+			},
+			{
+				"name": "constant.language.os.vgui",
+				"match": "(?<!\\w)\\[\\$(OSX|WINDOWS|LINUX)\\](?!\\w)"
+			},
+			{
+				"name": "constant.language.fontstyle.vgui",
+				"match": "(?<!\\w)(regular|underline|italic|uppercase|lowercase)(?!\\w)"
+			}]
+		}
+	},
+	"scopeName": "source.vgui"
+}
