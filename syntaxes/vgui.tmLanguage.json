@@ -101,6 +101,9 @@
 				},
 				{
 					"include": "#constants"
+				},
+				{
+					"include": "#keywords"
 				}]
 			}]
 		},
@@ -123,7 +126,7 @@
 			},
 			{
 				"name": "entity.other.attribute-name.vgui",
-				"match": "(?i):(hover|active|focus|selected|disabled|scrollbar|framefocus)(?!\\w)"
+				"match": "(?i):(hover|active|focus|selected|disabled|scrollbar|framefocus|empty)(?!\\w)"
 			},
 			{
 				"begin": "(?i)(?<![\\w])(render(_bg)?)(?![\\w])",
@@ -200,7 +203,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "constant.language.os.vgui",
-				"match": "(?<!\\w)\\[\\$(OSX|WINDOWS|LINUX)\\](?!\\w)"
+				"match": "(?<!\\w)\\[(([!]{0,1}\\$(OSX|WINDOWS|LINUX))|&&|\\|\\|)*\\](?!\\w)"
 			},
 			{
 				"match": "(?i)(?<!\\w)(include)[ ]+(\\\"[\\w\\d_\\-./]+\\\")",
